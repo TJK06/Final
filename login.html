@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Login</title>
+</head>
+<body>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function login(){
+           
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password1").value;
+            let uname = localStorage.getItem("mail");
+            let pass = localStorage.getItem("password");
+            if(username==uname && password==pass)
+        { alert ("you are valid");
+        window.location.href="home.html";
+        }
+       else{ alert("intruder");}
+}
+    </script>
+    <div class="login">
+        <h1>Login</h1>
+            
+            <input type="text" name="u" placeholder="Username" id="username" />
+                <input type="password" name="p" placeholder="Password" id="password1" />
+                <button type="submit" class="btn btn-primary btn-block btn-large" onclick="login()">Let me in</button>
+            
+        </div>  
+</body>
+</html>
